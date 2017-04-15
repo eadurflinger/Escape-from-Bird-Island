@@ -38,10 +38,10 @@ world_map =[
     [None,BoringTile(1,3),None]
 ]
 
-def tile_at(x,y)
-    if x < 0 or y < 0:
-        return None
-    try:
-        return world_map[x][y]
-    except IndexError:
-        return None
+    def tile_at(x,y)
+        if x < 0 or y < 0:
+            return None
+        try:
+            return world_map[y][x]
+        except IndexError:
+            return None

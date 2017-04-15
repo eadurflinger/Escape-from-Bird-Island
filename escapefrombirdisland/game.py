@@ -7,13 +7,13 @@ def play():
     while True:
         action_input = get_player_command()
         if action_input in ['n', 'N']:
-            print("Go North!")
+            player.move_north
         elif action_input in ['s', 'S']:
-            print("Go South!")
+            player.move_south
         elif action_input in ['e', 'E']:
-            print("Go East!")
+            player.move_east
         elif action_input in ['w', 'W']:
-            print("Go West!")
+            player.move_west
         elif action_input in ['i', 'I']:
             print("Inventory:")
             player.print_inventory()
