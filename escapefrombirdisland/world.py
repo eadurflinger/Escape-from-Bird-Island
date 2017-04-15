@@ -29,4 +29,19 @@ class VictoryTile(MapTile):
         As you spread your wings you can feel the wind rustling your silky feathers.
         The sun beams down on you as you soar on the updrafts.
         """
-        
+
+
+world_map =[
+    [None,VictoryTile(1,0),None],
+    [None,BoringTile(1,1),None]
+    [BoringTile(0,2),StartTile(1,2),BoringTile(2,2)]
+    [None,BoringTile(1,3),None]
+]
+
+def tile_at(x,y)
+    if x < 0 or y < 0:
+        return None
+    try:
+        return world_map[x][y]
+    except IndexError:
+        return None
