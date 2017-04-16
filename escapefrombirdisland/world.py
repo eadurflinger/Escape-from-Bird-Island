@@ -31,7 +31,21 @@ class VictoryTile(MapTile):
         As you spread your wings you can feel the wind rustling your silky feathers.
         The sun beams down on you as you soar on the updrafts.
         """
+class EnemyTile(MapTile):
+    def __init__(self, x, y):
+        r = random.random()
+        if r < 0.50:
+            self.enemy = enemies.MourningDove()
+            self.enemy = enemies.AndeanCockOfTheRock()
+        elif r < 0.80:
+            self.enemy = enemies.BlueManakin()
+        elif r < 0.90
+            self.enemy = enemies.YellowBelliedSapSucker()
+        elif r < 0.95
+            self.enemy = enemies.SatinBowerBird()
 
+        super().__init__(x,y)
+        
 world_map =[
     [None,VictoryTile(1,0),None],
     [None,BoringTile(1,1),None],
