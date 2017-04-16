@@ -1,10 +1,13 @@
 from player import Player
+import world
 
 def play():
     inventory = ['Egg','Feather','seed(5)']
     print("Escape from Bird Island")
     player = Player()
     while True:
+        room = world.tile_at(player.x, player.y)
+        print(room.intro_text())
         action_input = get_player_command()
         if action_input in ['n', 'N']:
             player.move_north
