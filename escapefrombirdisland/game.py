@@ -18,7 +18,6 @@ def play():
         elif action_input in ['w', 'W']:
             player.move_west
         elif action_input in ['i', 'I']:
-            print("Inventory:")
             player.print_inventory()
         else:
             print("Invalid action!")

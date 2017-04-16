@@ -1,4 +1,5 @@
 import random
+import enemies
 
 class MapTile:
     def __init__(self, x, y):
@@ -18,19 +19,14 @@ class StartTile(MapTile):
         """
 
 
-class BoringTile(MapTile):
-    def intro_text(self):
-        return """
-        Boring Bird Base
-        """
-
-
 class VictoryTile(MapTile):
     def intro_text(self):
         return """
         As you spread your wings you can feel the wind rustling your silky feathers.
         The sun beams down on you as you soar on the updrafts.
         """
+
+
 class EnemyTile(MapTile):
     def __init__(self, x, y):
         r = random.random()
@@ -39,18 +35,18 @@ class EnemyTile(MapTile):
             self.enemy = enemies.AndeanCockOfTheRock()
         elif r < 0.80:
             self.enemy = enemies.BlueManakin()
-        elif r < 0.90
+        elif r < 0.95:
             self.enemy = enemies.YellowBelliedSapSucker()
-        elif r < 0.95
+        else:
             self.enemy = enemies.SatinBowerBird()
 
         super().__init__(x,y)
-        
+
 world_map =[
     [None,VictoryTile(1,0),None],
-    [None,BoringTile(1,1),None],
-    [BoringTile(0,2),StartTile(1,2),BoringTile(2,2)],
-    [None,BoringTile(1,3),None]
+    [None,EnemyTile(1,1),None],
+    [EnemyTile(0,2),StartTile(1,2),EnemyTile(2,2)],
+    [None,EnemyTile(1,3),None]
 ]
 
 def tile_at(x, y):
