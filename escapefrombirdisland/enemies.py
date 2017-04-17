@@ -35,3 +35,10 @@ class SatinBowerBird(Enemy):
         self.name = "Satin Bower Bird"
         self.hp =80
         self.damage = 15
+
+def intro_text(self):
+    if self.enemy.is_alive():
+        return "A {} awaits!".format(self.enemy.name)
+    else:
+        return "You've defeated the {}.".format(self.enemy.name)
+        

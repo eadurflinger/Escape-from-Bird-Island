@@ -26,7 +26,6 @@ class VictoryTile(MapTile):
         The sun beams down on you as you soar on the updrafts.
         """
 
-
 class EnemyTile(MapTile):
     def __init__(self, x, y):
         r = random.random()
