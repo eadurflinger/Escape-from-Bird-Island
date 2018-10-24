@@ -16,6 +16,7 @@ class StartTile(MapTile):
         You find yourself in a dimmly lit hallway.
         There are oak wood doors on either side of you. Behind and before you the hallway extends into darkness.
         Gentle cooing can be heard reverberating in the air.
+        sdhfajdfl osjdhgoasjroidgf owjhgofijeriog
         """
 
 
